@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome + Sobrenome</title>
+</head>
+
+<body>
+    <input type="text" id="name" name="nome" placeholder="nome">
+    <input type="text" id="surname" name="sobrenome" placeholder="sobrenome">
+    <button id="btn">enviar</button>
+    <h1 id="nomeDigitado"></h1>
+    <script>
+        const nome = document.getElementById("name")
+        const sobrenome = document.getElementById("surname")
+
+        document.getElementById("btn").onclick = () => {
+            const h1 = document.getElementById("nomeDigitado")
+            h1.innerText = `${nome.value} ${sobrenome.value}`
+        }
+    </script>
+</body>
+
+</html>
